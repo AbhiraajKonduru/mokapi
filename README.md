@@ -146,7 +146,7 @@ Your function can return one of two types of responses:
 | `--port` | `-p` | Port to bind the local server | `3001` |
 | `--delay` | `-d` | Artificial network delay in milliseconds | `0` |
 | `--method` | `-m` | Filter acceptable HTTP methods (`GET`, `POST`, `ALL`, etc.) | `ALL` |
-| `--watch` | `-w` | Watch handler file(s) for changes and live-reload them | `false` |
+| `--watch` (coming soon) | `-w` | Watch handler file(s) for changes and live-reload them | `false` |
 | `--cors` | | Enable permissive CORS headers | `false` |
 | `--json` | | Output only structured JSON logs | `false` |
 | `--no-banner`| | Skip printing the Mokapi ASCII banner | |
