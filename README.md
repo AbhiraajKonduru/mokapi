@@ -35,7 +35,7 @@ Run it:
 ```bash
 npx mokapi mock.js --port 3001
 ```
-Test it: `curl http://localhost:3001`
+Test it: `curl http://localhost:3001` or `irm http://localhost:3001`
 
 ---
 
