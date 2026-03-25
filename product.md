@@ -215,24 +215,3 @@ mokapi/
 ```
 
 The dist bundle must begin with `#!/usr/bin/env node` so `npx mokapi` works without a global install.
-
----
-
-## 6. Future / Out of Scope for V1
-
-- `--openapi <file>`: Validate responses against an OpenAPI spec.
-- Path params (`:id` style routing): placeholder on `req.params` in V1 handler type, but not parsed by Fastify route — use `req.path` + manual parsing in V1.
-- Multi-file handlers / router files.
-- HTTPS / TLS termination.
-
----
-
-## 7. Acceptance Criteria
-
-1. `npx mokapi handler.ts` starts a server in < 500ms on a cold run.
-2. Editing `handler.ts` and hitting the endpoint immediately reflects changes — no restart.
-3. A handler that throws returns `500 { "error": "..." }` without crashing the server.
-4. `--json` mode produces only valid newline-delimited JSON to stdout; banner is fully suppressed.
-5. A Python file that prints valid JSON to stdout is served correctly.
-6. `--delay 500` adds ~500ms to every response including errors.
-7. `--method GET` causes all non-GET requests to receive `405`.
