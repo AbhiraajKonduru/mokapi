@@ -4,6 +4,8 @@
 
 ez-mokapi is a lightning-fast, zero-config CLI tool designed for developers who need to mock, simulate, or experiment with APIs instantly. Turn any simple script file into a fully functional local web server. No complex routing, no boilerplate, just write a function and go.
 
+[![npm version](https://img.shields.io/npm/v/ez-mokapi.svg)](https://www.npmjs.com)
+
 ---
 
 ## ⚡ Features
