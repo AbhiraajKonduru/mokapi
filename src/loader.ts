@@ -70,15 +70,25 @@ export default (req) => {
 }
 
 function bustCache(resolved: string): void {
+  // Try to get exact Node require.cache path which might differ in case on Windows
+  let exactPath = resolved;
+  try {
+    exactPath = require.resolve(resolved);
+  } catch {
+    // Ignore if not resolvable
+  }
+
   const dir = path.dirname(resolved);
+  const exactDir = path.dirname(exactPath);
 
   // Delete the main file entry
   delete require.cache[resolved];
+  delete require.cache[exactPath];
 
   // Delete any cached module whose path starts with the same directory
   // and is not inside node_modules (transitive local deps)
   for (const key of Object.keys(require.cache)) {
-    if (key.startsWith(dir) && !key.includes('node_modules')) {
+    if ((key.startsWith(dir) || key.startsWith(exactDir)) && !key.includes('node_modules')) {
       delete require.cache[key];
     }
   }

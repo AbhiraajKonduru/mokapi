@@ -1,6 +1,6 @@
 {
   "name": "ez-mokapi",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Run any JS/TS/Python function as a REST endpoint in 2 seconds.",
   "main": "dist/index.js",
   "files": [
