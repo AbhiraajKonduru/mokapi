@@ -1,8 +1,8 @@
-# 🚀 Mokapi
+# 🚀 ez-mokapi
 
 **Run any JS/TS/Python function as a REST endpoint in 2 seconds.**
 
-Mokapi is a lightning-fast, zero-config CLI tool designed for developers who need to mock, simulate, or experiment with APIs instantly. Turn any simple script file into a fully functional local web server. No complex routing, no boilerplate, just write a function and go.
+ez-mokapi is a lightning-fast, zero-config CLI tool designed for developers who need to mock, simulate, or experiment with APIs instantly. Turn any simple script file into a fully functional local web server. No complex routing, no boilerplate, just write a function and go.
 
 ---
 
@@ -33,7 +33,7 @@ export default (req) => {
 
 Run it:
 ```bash
-npx mokapi mock.js --port 3001
+npx ez-mokapi mock.js --port 3001
 ```
 Test it: `curl http://localhost:3001` or `irm http://localhost:3001`
 
@@ -41,7 +41,7 @@ Test it: `curl http://localhost:3001` or `irm http://localhost:3001`
 
 ## 📖 The Handler Contract
 
-Mokapi expects your file to export a **default function**. This function receives the incoming request details and its return value is sent back as the HTTP response.
+ez-mokapi expects your file to export a **default function**. This function receives the incoming request details and its return value is sent back as the HTTP response.
 
 ### TypeScript / JavaScript
 
@@ -81,19 +81,19 @@ def mock_handler(req):
 
 ## 🗺️ Routing: Single vs. Multiple Files
 
-Mokapi adapts its routing based on how many files you provide:
+ez-mokapi adapts its routing based on how many files you provide:
 
 ### Single File (Catch-All)
 If you provide a single file, Mokapi creates a "Catch-All" route (`/*`):
 ```bash
-npx mokapi index.ts
+npx ez-mokapi index.ts
 ```
 *Requests to `/users`, `/payments`, or `/any/nested/path` will all be routed to `index.ts`.*
 
 ### Multiple Files (File-based Routing)
 If you provide multiple files, Mokapi auto-maps them to specific endpoints based on their filenames:
 ```bash
-npx mokapi users.js auth.ts
+npx ez-mokapi users.js auth.ts
 ```
 * `users.js` handles requests to `/users`.
 * `auth.ts` handles requests to `/auth`.
@@ -102,7 +102,7 @@ npx mokapi users.js auth.ts
 
 ## ⚙️ Request & Response Objects
 
-Mokapi makes the incoming HTTP request highly accessible to your handler function. 
+ez-mokapi makes the incoming HTTP request highly accessible to your handler function. 
 
 ### `MokapiRequest`
 Your handler function is passed a request object containing the following properties:
@@ -116,7 +116,7 @@ Your handler function is passed a request object containing the following proper
 Your function can return one of two types of responses:
 
 1. **Direct Payload (Implicit 200 OK)**:
-   Return an object, array, or string directly, and Mokapi will wrap it in an HTTP 200.
+   Return an object, array, or string directly, and ez-mokapi will wrap it in an HTTP 200.
    ```javascript
    export default () => ({ status: 'active' });
    ```

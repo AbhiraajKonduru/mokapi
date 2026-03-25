@@ -4,7 +4,7 @@ import path from 'path';
 const program = new Command();
 
 program
-  .name('mokapi')
+  .name('ez-mokapi')
   .description('Run any JS/Python function as a REST endpoint in 2 seconds.')
   .argument('[files...]', 'Path to the handler file(s) (JS/TS/Python)')
   .option('--demo', 'Print a minimal mock file and run it', false)

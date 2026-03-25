@@ -1,18 +1,28 @@
 {
-  "name": "mokapi",
+  "name": "ez-mokapi",
   "version": "1.0.0",
-  "description": "",
+  "description": "Run any JS/TS/Python function as a REST endpoint in 2 seconds.",
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "bin": {
-    "mokapi": "./dist/index.js"
+    "ez-mokapi": "./dist/index.js"
   },
   "scripts": {
     "dev": "tsx src/index.ts",
     "build": "tsup",
-    "prepublishOnly": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [],
+  "keywords": [
+    "mock",
+    "api",
+    "mocking",
+    "rest",
+    "server",
+    "simulation",
+    "development"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",

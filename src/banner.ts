@@ -16,7 +16,7 @@ export interface BannerOpts {
 export function printBanner(opts: BannerOpts): void {
   if (opts.json || opts.noBanner) return;
 
-  const logo = figlet.textSync('MOKAPI', { font: 'ANSI Shadow' });
+  const logo = figlet.textSync('EZ-MOKAPI', { font: 'ANSI Shadow' });
   console.log(gradient.cristal(logo));
   console.log(pc.dim('  Run any JS/Python function as a REST endpoint in 2 seconds.\n'));
   console.log(`  ${pc.bold(pc.green('●'))} Listening on ${pc.cyan(`http://localhost:${opts.port}`)}`);
