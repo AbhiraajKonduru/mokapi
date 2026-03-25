@@ -1,13 +1,13 @@
 {
   "name": "ez-mokapi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Run any JS/TS/Python function as a REST endpoint in 2 seconds.",
   "main": "dist/index.js",
   "files": [
     "dist"
   ],
   "bin": {
-    "ez-mokapi": "./dist/index.js"
+    "ez-mokapi": "dist/index.js"
   },
   "scripts": {
     "dev": "tsx src/index.ts",
