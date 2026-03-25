@@ -2,6 +2,8 @@
 
 **Run any JS/TS/Python function as a REST endpoint in 2 seconds.**
 
+Every mock API tool I tried solved the problem... eventually. But they all came with ceremony: a config file to write, a UI to click through, a server to scaffold, or a JSON schema to maintain. I just wanted to point at a file I'd already written and get an endpoint. I'd been writing Node for years and it felt obvious that this should be a one-liner in the terminal. So I built ez-mokapi: no config, no boilerplate, no context-switching. Write a function, run a command, get a URL.
+
 ez-mokapi is a lightning-fast, zero-config CLI tool designed for developers who need to mock, simulate, or experiment with APIs instantly. Turn any simple script file into a fully functional local web server. No complex routing, no boilerplate, just write a function and go.
 
 [![npm version](https://img.shields.io/npm/v/ez-mokapi.svg)](https://www.npmjs.com)
@@ -20,6 +22,8 @@ ez-mokapi is a lightning-fast, zero-config CLI tool designed for developers who 
 - **CORS Support**: Enable permissive CORS headers with a single `--cors` flag for direct frontend integration.
 - **Simulate error handling**: Easily simulate error handling by returning an error object from the handler function.
 
+---
+<img width="1158" height="378" alt="Screenshot 2026-03-24 220508" src="https://github.com/user-attachments/assets/12e5bfa0-9c82-437c-97bc-7b81175299eb" />
 ---
 
 ## 🛠️ Quick Start
