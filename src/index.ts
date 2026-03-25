@@ -22,23 +22,23 @@ Example JavaScript handler:
   };
 
 Example usage:
-  $ mokapi handler.js
-  $ mokapi --demo
+  $ ez-mokapi handler.js
+  $ ez-mokapi --demo
 `)
   .action(async (files: string[] | undefined, opts) => {
     let resolvedFiles: string[] = [];
 
     if (opts.demo) {
-      console.log('\n# Mokapi Demo mode');
+      console.log('\n# ez-mokapi Demo mode');
       console.log('# Example minimal handler:');
       console.log('export default (req) => {');
-      console.log('  return { id: 1, message: "Hello from Mokapi demo!" };');
+      console.log('  return { id: 1, message: "Hello from ez-mokapi demo!" };');
       console.log('};\n');
 
       const demoFile = path.resolve(process.cwd(), 'demo-handler.ts');
       const fs = await import('fs');
       if (!fs.existsSync(demoFile)) {
-        fs.writeFileSync(demoFile, 'export default (req) => { return { id: 1, message: "Hello from Mokapi demo!" }; };');
+        fs.writeFileSync(demoFile, 'export default (req) => { return { id: 1, message: "Hello from ez-mokapi demo!" }; };');
       }
       resolvedFiles = [demoFile];
     } else if (files && files.length > 0) {
